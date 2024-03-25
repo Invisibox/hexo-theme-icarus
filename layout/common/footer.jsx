@@ -12,7 +12,6 @@ class Footer extends Component {
             siteYear,
             author,
             links,
-            icp,
             copyright,
             showVisitorCounter,
             visitorCounterTitle
@@ -44,10 +43,6 @@ class Footer extends Component {
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>&nbsp;&&nbsp;
                             <a href="https://github.com/imaegoo/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
                             {showVisitorCounter ? <br /> : null}
-                            {icp ? [
-                                <a href="https://beian.miit.gov.cn" target="_blank" rel="noreferrer noopener">{icp}</a>,
-                                <span>&nbsp;-&nbsp;</span>
-                            ] : null}
                             {showVisitorCounter ? <span id="busuanzi_container_site_uv"
                                 dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
                         </p>
@@ -90,8 +85,6 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         });
     }
 
-    const icp = footer ? footer.icp : null;
-
     return {
         logo,
         logoLightUrl: url_for(logoLight),
@@ -101,7 +94,6 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         siteYear: date(new Date(), 'YYYY'),
         author,
         links,
-        icp,
         copyright: footer?.copyright ?? '',
         showVisitorCounter: plugins && plugins.busuanzi === true,
         visitorCounterTitle: _p('plugin.visitor_count', '<span id="busuanzi_value_site_uv">0</span>')
