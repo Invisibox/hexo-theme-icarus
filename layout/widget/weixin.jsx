@@ -6,7 +6,7 @@ class WeiXin extends Component {
     return (
       <div class="card widget">
         <div class="card-content">
-          <div class="media" style="align-items: center">
+          <div class="media" style="overflow: hidden; align-items: center">
             <div class="media-left">
               <figure class="image is-96x96">
                 <img src="/images/weixin/qrcode.jpg" alt="微信二维码" />
