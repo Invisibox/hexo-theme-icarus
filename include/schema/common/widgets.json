@@ -41,6 +41,9 @@
                 "$ref": "/widget/twikoo_new.json"
             },
             {
+                "$ref": "/widget/weixin.json"
+            },
+            {
                 "$ref": "/widget/adsense.json"
             },
             {
