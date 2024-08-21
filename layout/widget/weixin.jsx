@@ -15,7 +15,7 @@ class WeiXin extends Component {
             <div class="media-content">
               <div id="weixin-search-logo"></div>
               <div id="weixin-search-text" class="control has-icons-left">
-                <input class="input" readonly value="虹墨iMaeGoo" />
+                <input class="input" readonly value="虹墨iMaeGoo" onfocus="this.select()" />
                 <span class="icon is-small is-left">
                   <i class="fas fa-search"></i>
                 </span>
